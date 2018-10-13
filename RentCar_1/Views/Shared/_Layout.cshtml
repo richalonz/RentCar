@@ -18,7 +18,7 @@
     }
 
     function DrawMenu(){
-      var items =["Home","Vehiculos","Rentar","Redes Sociales","Oficinas"]
+      var items =["Home","Vehiculos","Rentar","Redes Sociales","Oficinas", "Usuarios"]
 
       var html = '';
       items.forEach(function(item){
@@ -45,6 +45,8 @@
                 <li> <a href="" class="customButton">Oficinas</a></li>-->
             </ul>
         </nav>
+
+        @RenderBody()
 
         <article>
             <div id="contenido">
