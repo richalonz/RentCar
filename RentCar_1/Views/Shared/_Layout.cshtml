@@ -1,42 +1,87 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span> 
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+<html lang="en">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rent Car</title>
+
+    <link href="~/Content/w3.css" rel="stylesheet" />
+    <link href="~/Content/stylest.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="stylest.css">
+    <script>
+    function ponerPrimeraVista(){
+      document.getElementById('contenido').innerHTML= "Hola Mundo";
+
+    }
+
+    function DrawMenu(){
+      var items =["Home","Vehiculos","Rentar","Redes Sociales","Oficinas"]
+
+      var html = '';
+      items.forEach(function(item){
+        html+= '<li> <a href="" class="customButton">'+item+'</a></li>';
+      });
+      document.getElementById('contenedorMenu').innerHTML= html;
+    }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h2>Rent Car</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul id="contenedorMenu" style="margin:0;">
+                <!--<li> <a href="#" class="customButton" onclick="ponerPrimeraVista();">Home</a></li>
+                <li> <a href="" class="customButton">Vehiculos</a></li>
+                <li> <a href="" class="customButton">Rentar</a></li>
+                <li> <a href="" class="customButton">Redes Sociales</a></li>
+                <li> <a href="" class="customButton">Oficinas</a></li>-->
+            </ul>
+        </nav>
+
+        <article>
+            <div id="contenido">
+
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>Buscanos en ig:  RentCarRD</p>
+    </footer>
 </body>
+
+<script>
+  DrawMenu();
+</script>
+
 </html>
+
+<!--
+C# VS js
+
+public void talcosa (int id){
+  mensaje(id);
+
+}
+
+for(var i=0;i=10;i++){
+  talcosa(i);
+}
+
+
+
+var unacosa=["una","dos","tres"];
+
+unacosa.forEach(function(cosa){
+  alert(cosa);
+});
+
+-->
