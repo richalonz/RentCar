@@ -5,85 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rent Car</title>
-
-    <link href="~/Content/w3.css" rel="stylesheet" />
     <link href="~/Content/stylest.css" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="stylest.css">
+    <link href="~/Content/w3.css" rel="stylesheet" />
+    <title>Rent Car</title>
     <script>
-    function ponerPrimeraVista(){
-      document.getElementById('contenido').innerHTML= "Hola Mundo";
+        function DrawMenu() {
+            var items = [{ "name": "Home", "dir": "/Home/" }, { "name": "Vehiculos", "dir": "/Vehiculos/" }, { "name": "Rentar", "dir": "/Rentar/" }, { "name": "Redes Sociales", "dir:": "/RedesSociales/" }, { "name": "Oficinas", "dir": "/Oficinas/" }, { "name": "Usuarios", "dir": "/Usuarios/" }]
 
-    }
-
-    function DrawMenu(){
-      var items =["Home","Vehiculos","Rentar","Redes Sociales","Oficinas", "Usuarios"]
-
-      var html = '';
-      items.forEach(function(item){
-        html+= '<li> <a href="" class="customButton">'+item+'</a></li>';
-      });
-      document.getElementById('contenedorMenu').innerHTML= html;
-    }
-
+            var html = '';
+            items.forEach(function (item) {
+                html += '<li> <a href="'+item.dir+'" class="customButton">' + item.name + '</a></li>';
+            });
+            document.getElementById('contenedorMenu').innerHTML = html;
+        }
     </script>
 </head>
-
 <body>
     <header>
         <h2>Rent Car</h2>
     </header>
 
     <section>
-        <nav>
-            <ul id="contenedorMenu" style="margin:0;">
-                <!--<li> <a href="#" class="customButton" onclick="ponerPrimeraVista();">Home</a></li>
-                <li> <a href="" class="customButton">Vehiculos</a></li>
-                <li> <a href="" class="customButton">Rentar</a></li>
-                <li> <a href="" class="customButton">Redes Sociales</a></li>
-                <li> <a href="" class="customButton">Oficinas</a></li>-->
+        <nav style="width: 200px; height: calc(100vh - 125px);">
+            <ul id="contenedorMenu">
+                <li> <a href="/Home/" class="customButton">Home</a></li>
+                <li> <a href="/Vehiculos/" class="customButton">Vehiculos</a></li>
+                <li> <a href="/Rentar/" class="customButton">Rentar</a></li>
+                <li> <a href="/Home/Contact" class="customButton">Contacto</a></li>
             </ul>
         </nav>
 
-        @RenderBody()
+        <!--<script> DrawMenu(); </script>-->
 
         <article>
-            <div id="contenido">
-
+            <div id="contenido" @*style="overflow-y:scroll;*@">
+                @RenderBody()
             </div>
         </article>
     </section>
 
-    <footer>
-        <p>Buscanos en ig:  RentCarRD</p>
+    <footer class="" style=" position:fixed; bottom:0px; width:100%;">
+        <p>Buscanos en IG:  RentCarRD</p>
     </footer>
 </body>
 
-<script>
-  DrawMenu();
-</script>
-
 </html>
-
-<!--
-C# VS js
-
-public void talcosa (int id){
-  mensaje(id);
-
-}
-
-for(var i=0;i=10;i++){
-  talcosa(i);
-}
-
-
-
-var unacosa=["una","dos","tres"];
-
-unacosa.forEach(function(cosa){
-  alert(cosa);
-});
-
--->
