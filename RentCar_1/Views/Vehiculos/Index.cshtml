@@ -1,7 +1,153 @@
-﻿
+﻿@model IEnumerable<RentCar_1.Models.Vehiculos>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Vehiculos";
 }
 
-<h2>Vehículos Index</h2>
+<h2>Vehiculos</h2>
 
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ano)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_auto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ruta_imagen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_puertas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_pasajeros)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_transmision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ac_disponible)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_chasis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.placa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bolsa_aire)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.traccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_retrovisores)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.detalles_radio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.capacidad_combustible_gl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_combustible)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio_vehiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sucursal_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ult_ubicacion_gps)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ano)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_auto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ruta_imagen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_puertas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_pasajeros)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_transmision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ac_disponible)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_chasis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.placa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bolsa_aire)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.traccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_retrovisores)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.detalles_radio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.capacidad_combustible_gl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_combustible)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio_vehiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sucursal_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ult_ubicacion_gps)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

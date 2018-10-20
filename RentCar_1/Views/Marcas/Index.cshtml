@@ -1,0 +1,38 @@
+﻿@model IEnumerable<RentCar_1.Models.Marcas>
+
+@{
+    ViewBag.Title = "Listar Marcas";
+}
+
+<h2>Listar Marcas</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pais_origen)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre_marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pais_origen)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+
+</table>

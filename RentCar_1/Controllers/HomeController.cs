@@ -26,5 +26,10 @@ namespace RentCar_1.Controllers
 
             return View();
         }
+
+        public ActionResult Administrar()
+        {
+            return View();
+        }
     }
 }
