@@ -12,12 +12,6 @@ namespace RentCar_1.Models
         public int cliente_id { get; set; }
         public string moneda { get; set; }
         [Required]
-        public string metodo_pago { get; set; }
-        public string cuenta_paypal { get; set; }
-        public string banco { get; set; }
-        public string num_tarjeta { get; set; }
-        public string fecha_exp { get; set; }
-        public string cvs { get; set; }
-        public string tipo_tarjeta { get; set; }
+        public string metodo_pago { get; set; } //efectivo, tarjeta, cheque, etc.
     }
 }

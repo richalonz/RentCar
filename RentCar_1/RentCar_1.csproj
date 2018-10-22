@@ -231,6 +231,7 @@
     <Content Include="Views\CatVehiculos\Create.cshtml" />
     <Content Include="Views\Vehiculos\Index.cshtml" />
     <Content Include="Views\Vehiculos\Create.cshtml" />
+    <Content Include="Views\Vehiculos\MostrarVehiculos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

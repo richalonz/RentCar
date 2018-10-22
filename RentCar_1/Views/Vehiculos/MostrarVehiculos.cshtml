@@ -4,11 +4,8 @@
     ViewBag.Title = "Vehiculos";
 }
 
-<h2>Vehiculos</h2>
+<h2>Seleccionar Vehiculo</h2>
 
-<p>
-    @Html.ActionLink("Crear Nuevo", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -59,9 +56,7 @@
             @Html.DisplayFor(modelItem => item.disponible)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("Rentar Vehiculo", "Rentar", new { id=item.id }) <!--Redirige a pagina para pagar-->
         </td>
     </tr>
 }

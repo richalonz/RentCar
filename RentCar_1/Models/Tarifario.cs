@@ -20,18 +20,10 @@ namespace RentCar_1.Models
         [Range(0.01, 100.00)]
         public decimal porc_seguro { get; set; }
         [Range(0.01,999999.99)]
-        public decimal costo_revision_mecanica { get; set; }
+        public decimal costo_mantenimiento { get; set; }
         [Range(0.01, 999999.99)]
-        public decimal costo_limpieza { get; set; }
-        [Range(0.01, 999999.99)]
-        public decimal costo_gl_gasolina { get; set; } //galon gasolina
-        [Range(0.01, 999999.99)]
-        public decimal costo_gl_glp { get; set; } //galon gas
-        [Range(0.01, 999999.99)]
-        public decimal costo_gl_gasoil { get; set; }
+        public decimal costo_gl_combustible { get; set; } //galon combustible
         [Range(0.01, 999999.99)]
         public decimal costo_srv_chofer { get; set; } //servicio chofer
-        [Range(0.01, 999999.99)]
-        public decimal costo_srv_wifi { get; set; } //servicio modem wifi
     }
 }

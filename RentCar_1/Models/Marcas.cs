@@ -11,7 +11,5 @@ namespace RentCar_1.Models
         public int id { get; set; }
         [Required] [StringLength(50)]
         public string nombre_marca { get; set; }
-        [StringLength(50)]
-        public string pais_origen { get; set; }
     }
 }

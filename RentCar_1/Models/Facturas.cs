@@ -18,8 +18,6 @@ namespace RentCar_1.Models
         [Required]
         public int usuario_id { get; set; }
         public DateTime fecha_hora_factura { get; set; }
-        [StringLength(19)]
-        public string nfc { get; set; }
         public string moneda { get; set; }
         [Required]
         public int detalle_factura_id { get; set; }

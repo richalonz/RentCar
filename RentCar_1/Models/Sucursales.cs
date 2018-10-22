@@ -19,6 +19,5 @@ namespace RentCar_1.Models
         public string telefon_directo { get; set; } //si existe
         [Range(0000,99999)]
         public int ext_telefonica { get; set; }
-        public string ruta_imagenes { get; set; } //opcional. fotos del local
     }
 }

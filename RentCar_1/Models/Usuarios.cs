@@ -27,7 +27,5 @@ namespace RentCar_1.Models
         public int sucursal_id { get; set; } //donde fue registrado y pertenece
         [Required]
         public bool inactivo { get; set; } //trabajando actualmente
-        [StringLength(30)]
-        public string razon_inactivo { get; set; }
     }
 }
