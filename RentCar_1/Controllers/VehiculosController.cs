@@ -28,7 +28,7 @@ namespace RentCar_1.Controllers
         public ActionResult MostrarVehiculos()
         {
             var model = _repo.ObtenerTodos();
-            return View();
+            return View(model);
         }
 
         // GET: Vehiculos/Create

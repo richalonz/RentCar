@@ -1,0 +1,56 @@
+﻿@model IEnumerable<RentCar_1.Models.Sucursales>
+
+@{
+    ViewBag.Title = "Sucursales";
+}
+
+<h2>Sucursales</h2>
+
+<p>
+    @Html.ActionLink("Crear nueva", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_sucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ubicacion_gps)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefon_directo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ext_telefonica)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_sucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ubicacion_gps)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefon_directo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ext_telefonica)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) | <!--Privilegios de admin-->
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })  <!--Privilegios de admin-->
+        </td>
+    </tr>
+}
+
+</table>

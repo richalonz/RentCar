@@ -157,9 +157,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CatVehiculosController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarcasController.cs" />
     <Compile Include="Controllers\RentarController.cs" />
+    <Compile Include="Controllers\SucursalesController.cs" />
     <Compile Include="Controllers\VehiculosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -178,7 +181,10 @@
     <Compile Include="Models\Vehiculos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CatVehiculosRepository.cs" />
+    <Compile Include="Services\ClientesRepository.cs" />
+    <Compile Include="Services\EmpresaRepository.cs" />
     <Compile Include="Services\MarcasRepository.cs" />
+    <Compile Include="Services\SucursalesRepository.cs" />
     <Compile Include="Services\VehiculosRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -232,6 +238,11 @@
     <Content Include="Views\Vehiculos\Index.cshtml" />
     <Content Include="Views\Vehiculos\Create.cshtml" />
     <Content Include="Views\Vehiculos\MostrarVehiculos.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Sucursales\Index.cshtml" />
+    <Content Include="Views\Sucursales\Create.cshtml" />
+    <Content Include="Views\Empresa\Index.cshtml" />
+    <Content Include="Views\Clientes\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

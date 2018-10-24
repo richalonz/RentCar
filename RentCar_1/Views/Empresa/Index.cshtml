@@ -1,0 +1,46 @@
+﻿@model IEnumerable<RentCar_1.Models.Empresa>
+
+@{
+    ViewBag.Title = "Empresa";
+}
+
+<h2>Información de empresa</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_empresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sucursal_principal_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sucursal_principal_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

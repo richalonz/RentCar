@@ -14,9 +14,6 @@
         <th>
             @Html.DisplayNameFor(model => model.nombre_marca)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.pais_origen)
-        </th>
         <th></th>
     </tr>
 
@@ -24,9 +21,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.nombre_marca)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.pais_origen)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.id }) |

@@ -24,10 +24,6 @@ namespace RentCar_1.Models
         public string no_doc_legal { get; set; } 
         [Required] [StringLength(10)]
         public string tipo_doc { get; set; } //cedula, pasaporte
-        [Required] [StringLength(20)]
-        public string no_licencia_conduc { get; set; }
-        [StringLength(20)]
-        public string nacionalidad { get; set; }
         public int info_pago_id { get; set; } //relacionado a tabla de info pagos
     }
 }
